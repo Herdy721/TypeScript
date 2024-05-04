@@ -1,5 +1,6 @@
 # <img src="https://skillicons.dev/icons?i=ts" /> TypeScript na prática
 
+Data: [[2024-05-03]]
 
 O que é TypeScript?
 
