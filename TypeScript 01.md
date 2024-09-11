@@ -17,3 +17,20 @@ de forma válida. isto é, todo seu código JavaScript é válido em TypeScript 
 
 
 ---
+
+
+O TS é como um correto do JS.
+Para transformar um arquivo JS em TS, basta alterar o sufixo para .ts
+após isso é necessário compilar o código com o comando tsc nome.ts
+toda vez que altere o arquivo ts é necessário recompilar.
+
+## Forma correta de definir o tipo de uma variável como numérica
+
+let meuNumero: number = 0;
+O TS utiliza a sintaxe de dois-pontos (:) para separar o nome da variável de seu tipo explícito.
+
+```ts
+   let tipoTransacao: string = inputTipoTransacao.value;
+    let valor: number = inputValor.valueAsNumber;
+    let data: Date = new Date(inputData.value);
+```
