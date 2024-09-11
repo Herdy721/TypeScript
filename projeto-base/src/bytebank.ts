@@ -5,7 +5,7 @@ if (elementoSaldo!= null) {
     elementoSaldo.textContent = saldo.toString();
 }
 
-
+alert("Testando compilação do TS   sds")
 const elementoFormulario = document.querySelector('.block-nova-transacao form') as HTMLFormElement;
 elementoFormulario.addEventListener("submit", function(event) {
     event.preventDefault();

@@ -34,3 +34,25 @@ O TS utiliza a sintaxe de dois-pontos (:) para separar o nome da variável de se
     let valor: number = inputValor.valueAsNumber;
     let data: Date = new Date(inputData.value);
 ```
+
+
+Estrutura TS:
+![[Pasted image 20240911200645.png]]
+
+Arquivo config do TS
+```TS
+{
+    "compilerOptions": {
+        "target": "ES2022",
+        "outDir": "./dist/js/",
+        "noEmitOnError": true
+    },
+    "include": [
+        "./src/**/*"
+    ]
+}
+```
+
+ts -w
+
+é igual ao go live.. ele fica monitorando e ja compila em javascript
