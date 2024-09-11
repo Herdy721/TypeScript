@@ -30,9 +30,13 @@ let meuNumero: number = 0;
 O TS utiliza a sintaxe de dois-pontos (:) para separar o nome da variável de seu tipo explícito.
 
 ```ts
-   let tipoTransacao: string = inputTipoTransacao.value;
-    let valor: number = inputValor.valueAsNumber;
-    let data: Date = new Date(inputData.value);
+let tipoTransacao: string = inputTipoTransacao.value;
+let valor: number = inputValor.valueAsNumber;
+let data: Date = new Date(inputData.value);
+let valor: number = 3000;
+let nome: string = "nome";
+let isPago: boolean = false;
+let qualquer: any = "";
 ```
 
 
@@ -56,3 +60,42 @@ Arquivo config do TS
 ts -w
 
 é igual ao go live.. ele fica monitorando e ja compila em javascript
+
+Criando listas
+```ts
+//Arrays
+const list = [];
+list.push("ramon", 22, true)
+
+const lista: number[] = [];
+lista.push(4, 22, 55)
+```
+
+Tipos personalizados
+```ts
+// Tipos Personalizados (Type Alias)
+
+type Transacao = {
+    tipoTransacao: string,
+    data: Date,
+    valor: number
+}
+const novaTransacao: Transacao = {
+    tipoTransacao: "",
+    data: new Date(),
+    valor: 0,
+}
+```
+
+Enum (definindo oq deve ter dentro do type)
+```ts
+// Enum
+enum tipoTransacao {
+    DEPOSITO = "Depósito",
+    TRANSFERENCIA = "Transferência",
+    PAGAMENTO_BOLETO = "Pagamento de Boleto"
+}
+```
+
+![[Pasted image 20240911204517.png]]
+
