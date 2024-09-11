@@ -29,7 +29,7 @@ enum tipoTransacao {
 
 
 const novaTransacao: Transacao = {
-    tipoTransacao: tipoTransacao.,
+    tipoTransacao: tipoTransacao.PAGAMENTO_BOLETO,
     data: new Date(),
     valor: 0,
 }
