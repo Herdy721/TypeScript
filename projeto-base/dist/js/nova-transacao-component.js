@@ -1,9 +1,3 @@
-let saldo = 3000;
-const elementoSaldo = document.querySelector('.saldo-valor .valor');
-if (elementoSaldo != null) {
-    elementoSaldo.textContent = saldo.toString();
-}
-alert("Testando compilação do TS   sds");
 const elementoFormulario = document.querySelector('.block-nova-transacao form');
 elementoFormulario.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -17,19 +11,19 @@ elementoFormulario.addEventListener("submit", function (event) {
     let tipoTransacao = inputTipoTransacao.value;
     let valor = inputValor.valueAsNumber;
     let data = new Date(inputData.value);
-    if (tipoTransacao === 'Depósito') {
+    if (tipoTransacao === TipoTransacao.DEPOSITO) {
         saldo += Number(valor);
     }
-    else if (tipoTransacao === 'Transferência' || tipoTransacao === 'Pagamento de Boleto') {
+    else if (tipoTransacao === TipoTransacao.TRANSFERENCIA || tipoTransacao === TipoTransacao.PAGAMENTO_BOLETO) {
         saldo -= Number(valor);
     }
     else {
         alert('Tipo de transação é inválido!');
         return;
     }
-    elementoSaldo.textContent = saldo.toString();
+    elementoSaldo.textContent = saldo.toLocaleString("pt-br", { currency: "BRL", style: "currency" });
     const novaTransacao = {
-        tipo: tipoTransacao,
+        tipoTransacao: tipoTransacao,
         valor: valor,
         data: data
     };
