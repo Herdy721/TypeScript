@@ -1,8 +1,10 @@
-function formatarMoeda(valor: number): string {
+import { FormatoData } from "../types/FormatoData.js";
+
+export function formatarMoeda(valor: number): string {
   return valor.toLocaleString("pt-br", { style: "currency", currency: "BRL" });
 }
 
-function formataData(
+export function formataData(
   data: Date,
   formato: FormatoData = FormatoData.PADRAO
 ): string {
