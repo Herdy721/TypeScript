@@ -1,5 +1,5 @@
+import { formatarData, formatarMoeda } from "../utils/formatters.js";
 import { FormatoData } from "../types/FormatoData.js";
-import { formatarMoeda, formatarData } from "../Utils/formatters.js";
 import Conta from "../types/Conta.js";
 const elementoSaldo = document.querySelector(".saldo-valor .valor");
 const elementoDataAcesso = document.querySelector(".block-saldo time");
